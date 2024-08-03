@@ -1,0 +1,52 @@
+project:
+  type: book
+
+metadata-files:
+  - other/metadata.yml
+  - other/glossar.yml
+
+book:
+  title: "zkYes Research"
+  author: "Alexander Zammit"
+  date: "03.08.2024"
+  search: true
+  repo-url: "https://github.com/kaxxa123/zkyes-research.git"
+  issued: "03.08.2024"
+  language: "en-US"
+  isbn: ""
+  image: "other/image.jpg"
+  downloads: [pdf, epub]
+  page-navigation: true
+  chapters:
+    - index.qmd
+    - content/intro.qmd
+    - content/conclusion.qmd
+bibliography: other/references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    keep-tex: true
+    documentclass: scrbook
+    classoption: [paper=6in:9in,pagesize=pdftex,headinclude=on,footinclude=on,12pt]
+    include-in-header:
+      text: |
+        \usepackage{fvextra}
+        \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+        \areaset[0.50in]{4.5in}{8in}
+    include-before-body:
+      text: |
+        \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+           showspaces = false,
+           showtabs = false,
+           breaksymbolleft={},
+           breaklines
+        }
+    fig-pos: 'H'
+  epub:
+    toc: true
+    lang: en-US
+  docx:
+    toc: false
+    lang: en-US
