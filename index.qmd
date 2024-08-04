@@ -1,4 +1,3 @@
-# Generating PDF Documents with Quarto, LaTeX, and GitHub Actions {.unnumbered}
+# Privacy Enables Trust and Engagement {.unnumbered}
 
 <!-- the rest of the text is in the /content directory -->
-

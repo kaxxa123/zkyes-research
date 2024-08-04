@@ -1,6 +1,6 @@
-lang: de
+lang: "en-US"
 
 book:
-  title: Book Title
+  title: "zkYes Research"
   date: today
-  description: "short description of the content"
+  description: "zkYes voting solution research"

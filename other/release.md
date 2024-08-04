@@ -1,3 +1,3 @@
 # Release
 
-this is an automatic release
+zkYes voting solution research document.
