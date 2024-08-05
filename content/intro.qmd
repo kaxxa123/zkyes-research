@@ -1,3 +1,46 @@
-## Introduction
+## Literature Review
 
-Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction Introduction
+Reviewing on-chain voting literature, allows identifying common design properties shaping voting solutions. Surveys like Taş et al.[@survey:tas] and Jafar et al.[@survey:jafar] help us decompose an election process into four operations:
+
+1.	Registration.
+1.	Authentication/Authorization of election participants.
+1.	Vote submission.
+1.	Result tallying.
+
+These surveys also help identifying the key properties voting solutions strive to satisfy. Based on their work, we identify:
+
+1. __Eligibility__ – Only eligible voters should be allowed to vote. Eligibility criteria may include citizenship, share holding, token ownership etc.
+
+1. __Representative Voting__ – A vote must represent the voter's choice proportionately. In national elections this equates to one vote per voter.
+
+    DAOs employ a variety of models. Votes may be weighted based on a voter's token balance. Quadratic voting allows voters to cast  multiple votes. However, the voting cost raises quadratically in relation with the number of submitted votes.
+
+1. __Temper Resistant__ – Vote must represent the voter's choice faithfully. Temper resistance ensures that votes are recorded as casted and tallied as recorded.
+
+1. __Receipt-freeness__ – The solution should not provide a receipt allowing voters to disclose their vote. Such a receipt could be used to facilitate a vote buying scheme.
+
+1. __Early Tallying Prevention__ – Early vote tallying may allow candidates to influence the election outcome, for example by targeting undecided voters. This becomes even more serious if different candidates have unequal access to information.
+
+1. __Privacy__
+
+    a.	Protects against linking a voter's identity to a voting preference.
+    a.	Protects against identifying voters who casted their vote, from those abstaining.
+
+1. __Robust against attacks__ – Resilience to attacks from malicious opponents.
+
+1. __Verifiability__
+
+    a.	Ability for anyone to verify that the electoral process was correctly executed.
+    a.	Ability for voters to confirm that their vote was correctly recorded and counted.
+
+1. __User Friendly__ – Easy to use, requiring minimal voter interaction.
+
+1. __Scalable__ – Ability to handle the transaction volume required to execute the election.
+
+1. __Cost-effective__ – The benefit of participating in an election must outweigh any costs incurred. In national elections, free access is normally a hard requirement. Other election types may justify a participation fee.
+
+Having a clear picture of what constitutes a perfect on-chain voting solution provides a benchmark for measuring different solutions.
+
+One common conclusion that arises from literature is that no perfect solution has yet been proposed. Taş et al.[@survey:tas] state that various weaknesses led them to conclude that none of the blockchain voting systems fully solved all problems. Jafar et al.[@survey:jafar] state that no protocol satisfies all the desired properties and that protocols must make trade-offs when assembling the complete protocol.
+
+Nevertheless, newer solutions, not covered by these surveys are always pushing the boundaries of what is achievable.

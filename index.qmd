@@ -1,3 +1,8 @@
 # Privacy Enables Trust and Engagement {.unnumbered}
 
+Voting is a well-established tool for decentralizing decision-making processes. It helps taking all kind of decisions, impacting policies, allocating funds and taking other small/large decisions.
+
+In this setting privacy is a key enabler, allowing us to exercise our right to vote without fear.
+
+
 <!-- the rest of the text is in the /content directory -->
