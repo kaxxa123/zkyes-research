@@ -20,7 +20,7 @@ book:
   chapters:
     - index.qmd
     - content/intro.qmd
-    - content/conclusion.qmd
+    - content/references.qmd
 bibliography: other/references.bib
 csl: other/ieee.csl
 
