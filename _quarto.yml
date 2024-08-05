@@ -22,6 +22,7 @@ book:
     - content/intro.qmd
     - content/conclusion.qmd
 bibliography: other/references.bib
+csl: other/ieee.csl
 
 format:
   html:
