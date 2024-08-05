@@ -1,0 +1,23 @@
+## Preventing Early Tallying
+
+A particularly tricky problem is restricting the time when ballot opening and tallying is to take place.
+
+Ballots are most often encrypted for the election duration. Tallying may be performed by first decrypting all ballots and then counting vote preferences. Alternatively, one may employ an additively homomorphic scheme, allowing tallying over encrypted ballots to finally only decrypt the result. Both prevent disclosing intermediate results whilst voting is on-going.
+
+A common approach is the one requiring multiple parties to collaboratively recover a secret that unlocks tallying. The system relies on the integrity of trusted agents and on their interest in blocking other parties from gaining an advantage.
+
+Jiazhuo Lyu et al.[@vote:lyu] adopt a verifiable threshold secret sharing scheme based on Pedersen[@pedersen1991non]'s scheme. Wei-Jr Lai et al.[@vote:date]'s DATE employs ECDH, requiring the organizers to disclose the decryption key together. Both schemes recover the decryption key allowing for opening each vote and to count the result.
+
+In Chaintegrity, Zhang et al.[@vote:chaintegrity] opt for a threshold scheme based on the Paillier[@paillier1999] additively homomorphic encryption scheme. This allows adding votes without decrypting individual votes. The result is disclosed through a multi-party computation that combines partial decryptions without ever disclosing the secret key. This scheme provides a degree of protection to individual votes as each decryption requires running an MPC.
+
+An alternative approach involves the use of time-locked encryption. Such schemes allow voters to encrypt their ballot knowing that anyone will be able to decrypt it after a specified amount of time elapses.
+
+The League of Entropy[^1] drand network is enabling time-locked encryption based on the scheme proposed in the tlock[@tlock] preprint paper. tlock specifies an encryption algorithm that is primarily dependent on a time parameter. The corresponding decryption key is independently published by the drand network when the target time is reached. This is like an agent-based secret recovery scheme. However, the secret is recovered by an independent network.
+
+An alternative time-locked encryption scheme is the one relying on computational puzzles as proposed by Rivest, Shamir and Wagner[@rivest1996time]. Here decryption requires running a time-consuming computation. Estimating the time required to complete such computations, allows setting the complexity level that locks the encryption for the desired duration.
+
+Cicada[^2] implemented such a time-locked encryption scheme. They based their solution on the additively homomorphic scheme proposed by Malavolta et al.[@malavolta2019]. However, they modified the scheme to replace Paillier's encryption with exponential ElGamal.
+
+[^1]: League of Entropy - https://www.cloudflare.com/leagueofentropy/
+
+[^2]: Cicada - https://github.com/a16z/cicada
