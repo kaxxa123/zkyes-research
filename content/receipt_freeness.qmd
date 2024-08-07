@@ -4,8 +4,8 @@ Zhang et al.[@vote:chaintegrity], in their work proposing Chaintegrity, state th
 
 One approach to receipt-freeness involves transforming a ballot, such that a voter cannot prove being the one casting it. A voter could submit an encrypted vote to an intermediate layer. This re-randomizes the vote cipher preserving the vote preference, whilst a voter is no longer able to recognize one's own ballot. Yet, such a process may conflict with the highly desirable property of end-to-end verifiability. A voter may no longer be able to verify that one's vote was recorded and counted correctly.
 
-Vitalik Buterin, proposed the Minimal Anti-Collusion Infrastructure MACI[^1] solution to tackle this problem. Voters are allowed to both submit multiple votes and change their voting identity. These actions are recorded encrypted chronologically. Finally, a trusted agent is tasked with processing the action sequence and determine the final preference of each voter.
+Vitalik Buterin, proposed the Minimal Anti-Collusion Infrastructure MACI[^3] solution to tackle this problem. Voters are allowed to both submit multiple votes and change their voting identity. These actions are recorded encrypted chronologically. Finally, a trusted agent is tasked with processing the action sequence and determine the final preference of each voter.
 
 In MACI voters may still disclose individual votes/actions. However, voters are unable to provide a guarantee that the vote disclosed was indeed the one tallied. Thus, MACI denies the voter the ability to provide conclusive evidence of their voting preference whilst retaining end-to-end verifiability.
 
-[^1]: MACI https://ethresear.ch/t/minimal-anti-collusion-infrastructure/5413
+[^3]: MACI https://ethresear.ch/t/minimal-anti-collusion-infrastructure/5413
