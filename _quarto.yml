@@ -23,6 +23,7 @@ book:
     - content/early_tallying.qmd
     - content/receipt_freeness.qmd
     - content/onchain_tallying.qmd
+    - content/voter_eligibility.qmd
     - content/references.qmd
 bibliography: other/references.bib
 csl: other/ieee.csl

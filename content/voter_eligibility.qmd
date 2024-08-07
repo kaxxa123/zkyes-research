@@ -1,0 +1,11 @@
+## Voter Eligibility
+
+Voter eligibility may be determined from real-world data, such as nationality, age, etc. Other elections may rely on blockchain data, like token ownership. Either way, voter eligibility must be verifiable. Verifiability in-turn may require the identity of eligible voters to be public. Thus, privacy often does not grant complete anonymity. It rather hinges on schemes where even if a voter's identity is known, one cannot be linked to one's ballot.
+
+Eligible voters are commonly established by publishing a list of voter public keys. Voters validate themselves by proving ownership of one of these keys. Techniques include, NIZK-based proof-of-membership, ring signatures and blind signatures.
+
+Both Wei-Jr Lai et al.[@vote:date] and Jiazhuo Lyu et al.[@vote:lyu] employ linkable ring signatures. This allows voters to prove being within the set of eligible voters. In addition, signature linkability blocks double-voting attempts. Here privacy is a function of the ring size. The larger the ring, the better the privacy. However larger rings require more storage, and more computations to verify.
+
+ZKP-based proof of membership allows voters to prove their inclusion within the set of eligible voters. The scheme could be combined with a nullifier that blocks double voting. However, proof generation may be computationally intensive, degrading voter experience. Furthermore on-chain verification may also incur high transaction fees.
+
+Zhang et al.'s Chaintegrity[@vote:chaintegrity] employs blind signatures. This solution involves interaction between voters and election organizers. Gaining vote authorization and submitting the ballot requires two separate transactions. This degrades voter experience and opens some deanonymization risks. Voters must ensure not to use the same key pair for signing the two transactions and avoid IP-based transaction linkage. The paper recommends using TOR for this purpose.
