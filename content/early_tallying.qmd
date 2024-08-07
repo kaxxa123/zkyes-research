@@ -6,7 +6,7 @@ Ballots are most often encrypted for the election duration. Tallying may be perf
 
 A common approach is the one requiring multiple parties to collaboratively recover a secret that unlocks tallying. The system relies on the integrity of trusted agents and on their interest in blocking other parties from gaining an advantage.
 
-Jiazhuo Lyu et al.[@vote:lyu] adopt a verifiable threshold secret sharing scheme based on Pedersen[@pedersen1991non]'s scheme. Wei-Jr Lai et al.[@vote:date]'s DATE employs ECDH, requiring the organizers to disclose the decryption key together. Both schemes recover the decryption key allowing for opening each vote and to count the result.
+Jiazhuo Lyu et al.[@vote:lyu] adopt a verifiable threshold secret sharing scheme based on Pedersen's scheme[@pedersen1991non]. Wei-Jr Lai et al.'s DATE[@vote:date] employs ECDH, requiring the organizers to disclose the decryption key together. Both schemes recover the decryption key allowing for opening each vote and to count the result.
 
 In Chaintegrity, Zhang et al.[@vote:chaintegrity] opt for a threshold scheme based on the Paillier[@paillier1999] additively homomorphic encryption scheme. This allows adding votes without decrypting individual votes. The result is disclosed through a multi-party computation that combines partial decryptions without ever disclosing the secret key. This scheme provides a degree of protection to individual votes as each decryption requires running an MPC.
 

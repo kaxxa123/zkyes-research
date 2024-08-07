@@ -1,0 +1,9 @@
+## Off-Chain vs On-Chain Tallying
+
+Vote tallying must satisfy transparency and cost-effectiveness.
+
+Decrypting, validating and counting votes all at one go, can be a highly expensive operation to perform on-chain. Wei-Jr Lai et al.'s DATE[@vote:date] moves this process off-chain. Their solution publishes the decryption key for everyone to see. Anyone can retrieve the encrypted votes published on-chain and independently decrypt, verify and count the votes, determining the election result.
+
+In MACI the trusted agent also performs validation and counting off-chain. However, the tallying result, and a proof of correct computation, is finally published on-chain. This allows integrating the vote with other on-chain contracts.
+
+Additively homomorphic encryption allows adding encrypted votes as soon as these are casted. This allows spreading the cost over multiple transactions. However, such schemes need to be coupled with a validity proof for the encrypted ballot. This is typically achieved with a NIZK proofs, which in-turn makes verifying individual ballots more expensive.
