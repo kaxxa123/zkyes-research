@@ -1,0 +1,9 @@
+## Expressing Voting Preferences
+
+All the reviewed on-chain election proposals allow voters to choose 1-of-n options.
+
+DATE[@vote:date] employs CryptoNote V2.0[@cryptonoteV2] stealth addresses. Voters express their choice by sending their vote to a stealth address associated to one of the choice options. Chaintegrity[@vote:chaintegrity] ensures that each vote increments one of the choice options and homomorphically counts the preferences.
+
+Some real-world elections may require expressing more complex choices. For example, a multi-choice election could allow assigning preference levels. One could assign 1 to the most preferred option, 2 to the next best option and so forth.
+
+Potentially, multiple 1-of-n choices can be combined to encode more complex choices. Otherwise, an encryption scheme allowing for more flexible choice expression, could be employed. However increased flexibility may hinder the adoption of additively homomorphic tallying schemes.

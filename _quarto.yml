@@ -24,6 +24,7 @@ book:
     - content/receipt_freeness.qmd
     - content/onchain_tallying.qmd
     - content/voter_eligibility.qmd
+    - content/voting_preferences.qmd
     - content/references.qmd
 bibliography: other/references.bib
 csl: other/ieee.csl
