@@ -2,8 +2,14 @@
 
 The cost and implementation complexity of an on-chain voting solution greatly depends on the blockchain hosting the solution.
 
-A study[@zkconsent] covering ZKP verification costs on Ethereum, estimated an average transaction cost of \texteuro 590. This estimate was specific to the Zeth mixer[@zeth] for November 2021, at a price point of \texteuro 3,498/ETH. Since then, Ethereum changed significantly. Yet it is still indicative of how the choice of blockchain is critical in terms of cost feasibility. Layer 2 blockchains like Starknet have dramatically lowered the transaction costs, whilst backed by Ethereum's security.
+A study[@zkconsent] covering ZKP verification costs on Ethereum[^4], estimated an average transaction cost of \texteuro 590. This estimate was specific to the Zeth mixer[@zeth] for November 2021, at a price point of \texteuro 3,498/ETH. Since then, Ethereum changed significantly. Yet it is still indicative of how the choice of blockchain is critical in terms of cost feasibility. Layer 2 blockchains like Starknet[^5] have dramatically lowered the transaction costs, whilst backed by Ethereum's security.
 
-A blockchain with advanced built-in ZKP support, makes complex ZKP-based schemes easier to implement. Aztec and Aleo are two such examples. These abstract the implementation complexity of various ZKP constructs and relieve solutions from having to run their own trusted setup.
+A blockchain with advanced built-in ZKP support, makes complex ZKP-based schemes easier to implement. Aztec[^6] and Aleo[^7] are two such examples. These abstract the implementation complexity of various ZKP constructs and relieve solutions from having to run their own trusted setup.
 
 In case of blockchains having less rich ZKP support, a solution based on simpler NIZK schemes, ring signatures and stealth addresses may be easier and more efficient to implement.
+
+
+[^4]: Ethereum - https://ethereum.org/
+[^5]: Starknet - https://www.starknet.io/
+[^6]: Aztec - https://aztec.network/
+[^7]: Aleo - https://aleo.org/
