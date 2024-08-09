@@ -25,6 +25,7 @@ book:
     - content/onchain_tallying.qmd
     - content/voter_eligibility.qmd
     - content/voting_preferences.qmd
+    - content/chain_choice.qmd
     - content/references.qmd
 bibliography: other/references.bib
 csl: other/ieee.csl
