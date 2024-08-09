@@ -1,0 +1,16 @@
+## Voting in Decentralized Applications
+
+Voting decentralizes decision making. Indeed, decentralized blockchain protocols may be described as a continuous voting process. Node operators vote for protocol updates through the act of installing such updates. In proof-of-work consensus, nodes elect legitimate blocks by choosing which fork to follow. This perspective highlights how intrinsic voting is to decentralization.
+
+The same is true at application level. Decentralized applications are often coded as Decentralized Autonomous Organizations (DAOs), multi-signature contracts, or a combination of both. The workflow typically involves proposal submission, voting for proposal approval/rejection, and the execution of approved proposals. A proposal may seek the approval of a contract upgrade, or request funding through a token transfer.
+
+Basic multi-signature contracts provide this functionality for a group of well-known participants. Proposal submission involves digitally signing a function execution request. If enough participants submit their signature approving the same request, the function is executed.
+
+Fully fledged DAOs provide richer functionality, with various differing implementations. Each try to achieve an effective way to implement the workflow from proposal submission to execution. DAOs differ in their rules to identify eligible participants, apportioning voting power, assigning the right to submit proposals, managing vote delegation etc.
+
+A highly popular implementation is the one based on the OpenZeppelin[^8] Governor DAO. It promotes a model where eligibility is based on the ownership of voting tokens. The token balance may further determine whether one is allowed to submit a proposal and the vote weight of different participants. A minimum voting quota may be required for a proposal to be approved. Various time parameters control the start/end of the different workflow stages.
+
+Quadratic voting provides an alternative scheme for apportioning voting powers. Here participants are allowed to buy voting rights. However, the cost increases quadratically in relation with the number submitted votes. This scheme requires a proof of identity to prevent sybil attacks.
+
+
+[^8]: OpenZeppelin https://www.openzeppelin.com/
