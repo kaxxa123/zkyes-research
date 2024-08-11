@@ -10,7 +10,7 @@ Fully fledged DAOs provide richer functionality, with various differing implemen
 
 A highly popular implementation is the one based on the OpenZeppelin[^8] Governor DAO. It promotes a model where eligibility is based on the ownership of voting tokens. The token balance may further determine whether one is allowed to submit a proposal and the vote weight of different participants. A minimum voting quota may be required for a proposal to be approved. Various time parameters control the start/end of the different workflow stages.
 
-Quadratic voting provides an alternative scheme for apportioning voting powers. Here participants are allowed to buy voting rights. However, the cost increases quadratically in relation with the number submitted votes. This scheme requires a proof of identity to prevent sybil attacks.
+Quadratic voting provides an alternative scheme for apportioning voting powers. Here participants are allowed to buy voting rights. However, the cost increases quadratically in relation with the number of submitted votes. This scheme requires a proof of identity to prevent sybil attacks.
 
 
 [^8]: OpenZeppelin https://www.openzeppelin.com/
