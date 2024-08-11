@@ -37,12 +37,24 @@ format:
   pdf:
     keep-tex: true
     documentclass: scrreprt
-    classoption: [paper=6in:9in,pagesize=pdftex,headinclude=on,footinclude=on,11pt]
+    papersize: a4
+    fontsize: 12pt
+    geometry:
+      - inner=3cm
+      - outer=4cm
+      - top=3cm
+      - bottom=4cm
+      - headsep=22pt
+      - headheight=11pt
+      - footskip=33pt
+      - ignorehead
+      - ignorefoot
+      - heightrounded
     include-in-header:
       text: |
         \usepackage{fvextra}
         \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
-        \areaset[0.50in]{4.5in}{8in}
+        \areaset{14cm}{22cm}
     include-before-body:
       text: |
         \RecustomVerbatimEnvironment{verbatim}{Verbatim}{
