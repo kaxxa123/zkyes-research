@@ -27,6 +27,7 @@ book:
     - content/voting_preferences.qmd
     - content/chain_choice.qmd
     - content/dapps.qmd
+    - content/dao_private_voting.qmd
     - content/references.qmd
 bibliography: other/references.bib
 csl: other/ieee.csl

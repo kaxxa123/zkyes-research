@@ -1,0 +1,13 @@
+## DAO Private Voting
+
+DAOs pioneered on-chain voting but have largely overlooked privacy. This brought the highest level of transparency. However, it also opened the doors to potential risks, such as voter coercion and vote buying.
+
+With votes determining the allocation of valuable assets, the risk of bad actors influencing elections cannot be ignored. Privacy provides safeguards, allowing parties to exercise their voting rights safely and to have confidence that the DAO is operating fairly.
+
+As DAOs prioritized transparency, their designs swayed significantly from elections that prioritized privacy. Indeed, some popular DAO design traits pose additional challenges to the adoption of private voting.
+
+The use of token ownership to determine voter eligibility and voting power is a common DAO trait. In comparison, most voting literature assumes eligible voters are identifiable from a pre-compiled public key list. Furthermore, the literature often assumes a single vote per voter.
+
+For DAOs to adopt private voting, a scheme that can effectively support voting tokens is required. One may require voters to privately prove their token ownership balance. Such a proof would both confirm eligibility and the weight of submitted votes.
+
+Today DAOs also commonly support delegation. Through delegation, voters allocate their voting powers to others. Delegation may be necessary to ensure sufficient voter participation in elections that struggle to attract an acceptable voter turnout. However, delegation may also facilitate voter coercion and vote buying schemes. MACI, the anti-collusion solution, assumes voters cannot delegate. _Further investigation is needed to determine whether delegation can be implemented whilst mitigating its risks._
